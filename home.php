@@ -87,7 +87,6 @@
    <?php
 	 	$link = "http://{$base_API_url}/APIPlatform/index.php/{$version}/{$collectionName}?&oauth_token={$auth_token}";
 		$jsonResult = $mazayaEngine->getJsonFromUrl($link);
-		var_dump($jsonResult); 
 	?> 
  <div class="container">
          
@@ -100,18 +99,23 @@
  <div class="row">
          <div class="span12 columns">
          	<div class="accordion" id "accordion2">
+         		<?php
+         			foreach ($jsonResult as $key => $value) {
+						 
+				?>
          		<div class="accordion-group">
          			<div class="accordion-heading">
-         				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-         					Collapsable group
+         				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#<?php echo $key; ?>">
+         					<?php echo $value->name; ?>
          				</a>
          			</div>
-         			<div id="collapseOne" class="accordion-body collapse" style="height: 0px;">
+         			<div id=<?php echo $key; ?> class="accordion-body collapse" style="height: 0px;">
          				<div class="accordion-inner">
-         					
+         					<?php var_dump($value); ?>
          				</div>
          			</div>
          		</div>
+         		<?php } ?>
          	</div>	
          </div><!-- .span4 -->
          
