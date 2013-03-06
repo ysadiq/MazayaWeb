@@ -20,6 +20,9 @@
 	elseif($collectionName == "branchesListingView.php" || $collectionName == "branchView.php"){
 		$collectionName = "stores";
 	}
+	elseif ($collectionName == "offersView.php") {
+		$collectionName = "pushNotifications";
+	}
 	// pagination data
 	$countUrl = $getData_URL."/".$collectionName."/count?oauth_token=".$auth_token;
 	if(isset($_REQUEST['nameSearchField']))
