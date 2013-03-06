@@ -29,7 +29,7 @@
 					echo "<br/>"; 
 					foreach ($tier->products as $productIds) {
 						foreach ($productIds as $productId) {
-							$link = "http://{$base_API_url}/APIPlatform/index.php/{$version}/products/{$productId}?&oauth_token={$auth_token}";
+							$link = "http://{$base_API_url}/APIPlatform/index.php/{$version}/products/{$productId}?oauth_token={$auth_token}";
 							$productObjects = $mazayaEngine->getJsonFromUrl($link);
 							foreach ($productObjects as $productObject) {
 								echo $productObject->name;

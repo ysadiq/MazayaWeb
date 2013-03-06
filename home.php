@@ -16,7 +16,7 @@
        <?php require_once("includes/heroUnit.php"); ?>
  <div class="row">
  	<?php
- 		$link = "http://{$base_API_url}/APIPlatform/index.php/{$version}/{$collectionName}?&oauth_token={$auth_token}";
+ 		$link = "http://{$base_API_url}/APIPlatform/index.php/{$version}/{$collectionName}?oauth_token={$auth_token}";
 		$chains = $mazayaEngine->getJsonFromUrl($link);
 		foreach ($chains as $key => $chain) {
 	?>

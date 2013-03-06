@@ -9,11 +9,11 @@
           <a class="brand" href="/<?php echo $base_Mazaya_dir;?>/home.php">MazayaNMore</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Cataloge</a></li>
+              <li class="active"><a href="/<?php echo $base_Mazaya_dir;?>/home.php">Cataloge</a></li>
               <li class="dropdown">
               	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Branches <b class="caret"></b></a>
               	<ul class="dropdown-menu">
-                  <li><a href="#bydistrict">By District</a></li>
+                  <li><a href="/<?php echo $base_Mazaya_dir;?>/branches_by_district.php?limit=all&groupBy=address.city&sort=address.city.weight&dir=desc&definition=address.city,address.district">By District</a></li>
                   <li><a href="#bybrand">By Brand</a></li>
                   <li><a href="#nearBy">NearBy</a></li>
                 </ul>
