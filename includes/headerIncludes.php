@@ -17,7 +17,7 @@
 	elseif($collectionName == "redemptionView.php"){
 		$collectionName = "redemptionCatalog";
 	}
-	elseif($collectionName == "branches_by_district.php" || $collectionName == "branchView.php"){
+	elseif($collectionName == "branchesListingView.php" || $collectionName == "branchView.php"){
 		$collectionName = "stores";
 	}
 	// pagination data
